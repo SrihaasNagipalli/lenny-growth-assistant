@@ -29,9 +29,9 @@ services:
       DATABASE_URL: postgresql+asyncpg://lenny:lenny_pass@postgres:5432/lenny_db
       CHROMA_PERSIST_DIR: /app/data/chroma
       TRANSCRIPTS_DIR: /app/data/transcripts
-      LLM_PROVIDER: anthropic
-      ANTHROPIC_MODEL: claude-haiku-4-5-20251001
-      # Pass ANTHROPIC_API_KEY from host: export ANTHROPIC_API_KEY=sk-ant-... before docker compose up
+      LLM_PROVIDER: openrouter
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      OPENROUTER_MODEL: anthropic/claude-3-haiku
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       OLLAMA_BASE_URL: http://host.docker.internal:11434
       # Prevent HuggingFace network calls at runtime — model is baked into the image

@@ -6,6 +6,7 @@ from pydantic import Field
 
 class LLMProvider(str, Enum):
     ANTHROPIC = "anthropic"
+    OPENROUTER = "openrouter"
     OLLAMA = "ollama"
 
 
@@ -17,11 +18,16 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
 
     # LLM Provider Toggle
-    LLM_PROVIDER: LLMProvider = LLMProvider.ANTHROPIC
+    LLM_PROVIDER: LLMProvider = LLMProvider.OPENROUTER
 
     # Anthropic
     ANTHROPIC_API_KEY: str = ""
     ANTHROPIC_MODEL: str = "claude-haiku-4-5-20251001"
+
+    # OpenRouter (OpenAI-compatible, supports Anthropic models cheaply)
+    OPENROUTER_API_KEY: str = ""
+    OPENROUTER_BASE_URL: str = "https://openrouter.ai/api/v1"
+    OPENROUTER_MODEL: str = "anthropic/claude-3-haiku"
 
     # Ollama
     OLLAMA_BASE_URL: str = "http://localhost:11434"

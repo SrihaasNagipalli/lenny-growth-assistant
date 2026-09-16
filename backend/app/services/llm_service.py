@@ -1,5 +1,5 @@
 """
-LLM abstraction supporting Anthropic Claude and Ollama.
+LLM abstraction supporting Anthropic Claude, OpenRouter, and Ollama.
 Switch provider via LLM_PROVIDER env var without changing application code.
 """
 import logging
@@ -35,6 +35,8 @@ class LLMService:
     def current_model(self) -> str:
         if settings.LLM_PROVIDER == LLMProvider.ANTHROPIC:
             return settings.ANTHROPIC_MODEL
+        if settings.LLM_PROVIDER == LLMProvider.OPENROUTER:
+            return settings.OPENROUTER_MODEL
         return settings.OLLAMA_MODEL
 
     def _get_anthropic_client(self) -> anthropic.AsyncAnthropic:
@@ -57,6 +59,8 @@ class LLMService:
 
         if settings.LLM_PROVIDER == LLMProvider.ANTHROPIC:
             return await self._anthropic_chat(messages, system_text, max_tokens)
+        if settings.LLM_PROVIDER == LLMProvider.OPENROUTER:
+            return await self._openrouter_chat(messages, system_text, max_tokens)
         return await self._ollama_chat(messages, system_text, max_tokens)
 
     async def _anthropic_chat(
@@ -79,6 +83,51 @@ class LLMService:
             raise TimeoutError("Anthropic API timed out")
         except Exception as e:
             logger.exception("Anthropic error: %s", e)
+            raise
+
+    async def _openrouter_chat(
+        self, messages: list[dict], system: str, max_tokens: int
+    ) -> str:
+        """Call OpenRouter's OpenAI-compatible chat completions endpoint."""
+        if not settings.OPENROUTER_API_KEY:
+            raise ValueError("OPENROUTER_API_KEY is not configured")
+
+        # OpenAI format: system message is first in the messages list
+        openai_messages = [{"role": "system", "content": system}] + messages
+
+        headers = {
+            "Authorization": f"Bearer {settings.OPENROUTER_API_KEY}",
+            "Content-Type": "application/json",
+            "HTTP-Referer": "https://lenny-growth-frontend.onrender.com",
+            "X-Title": "The Lenny Growth Assistant",
+        }
+        payload = {
+            "model": settings.OPENROUTER_MODEL,
+            "messages": openai_messages,
+            "max_tokens": max_tokens,
+        }
+        try:
+            async with httpx.AsyncClient(timeout=120.0) as client:
+                r = await client.post(
+                    f"{settings.OPENROUTER_BASE_URL}/chat/completions",
+                    headers=headers,
+                    json=payload,
+                )
+                if r.status_code == 401:
+                    raise ValueError("Invalid OpenRouter API key")
+                if r.status_code == 429:
+                    raise RuntimeError("OpenRouter rate limit exceeded — try again shortly")
+                r.raise_for_status()
+                data = r.json()
+                return data["choices"][0]["message"]["content"]
+        except httpx.ConnectError:
+            raise RuntimeError("Cannot connect to OpenRouter API")
+        except httpx.TimeoutException:
+            raise TimeoutError("OpenRouter request timed out (>120s)")
+        except (ValueError, RuntimeError):
+            raise
+        except Exception as e:
+            logger.exception("OpenRouter error: %s", e)
             raise
 
     async def _ollama_chat(
