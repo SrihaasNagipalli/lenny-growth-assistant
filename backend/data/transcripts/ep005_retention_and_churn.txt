@@ -1,0 +1,42 @@
+Lenny's Podcast - Episode 5: The Science of Retention
+Host: Lenny Rachitsky | Guest: Casey Winters, Chief Product Officer
+
+[Transcript begins]
+
+Lenny: Casey, you've worked on retention at Pinterest, Grubhub, Eventbrite. What do most companies get wrong?
+
+Casey: They treat retention as a metric to track instead of a behavior to design. They look at monthly retention numbers, panic when they go down, ship a retention campaign, and move on. They're reacting rather than building.
+
+Retention is built in the product from day one. It's about what happens in the first minute, the first session, the first week. If those go wrong, no re-engagement email will fix it.
+
+Lenny: Talk me through the framework.
+
+Casey: I think about retention in three phases. Immediate retention — does the user come back within 24 hours? Short-term retention — do they come back in the first month? Long-term retention — do they have a reason to come back six months from now?
+
+Most companies focus on long-term and ignore immediate. But if someone doesn't come back in 24 hours after signing up, they almost never come back long-term. You've lost them.
+
+Lenny: What's driving immediate retention?
+
+Casey: Expectation matching and the "aha moment." Did the product deliver what the marketing promised? Did they find the core value fast enough?
+
+For Pinterest, the aha moment was saving your first five pins. If you didn't do that in your first session, you didn't come back. So every product decision in onboarding was about getting people to save five pins.
+
+Lenny: How do you find your aha moment?
+
+Casey: Cohort analysis. Take your retained users — say, people who came back 30 days later. What did they do in their first session that churned users didn't? Look for statistically significant behaviors.
+
+The answer is usually obvious once you see it. It's almost always core product action performed above a certain threshold within a certain time window.
+
+Lenny: What about long-term retention?
+
+Casey: Habit formation. You need to build the product into the user's routine. The tools for this are: frequency (use it more often), integration (connect it to things people already do), and notifications (bring them back).
+
+But notifications are a trap. Over-notification is one of the fastest ways to teach users to ignore you. Every notification should deliver value. If it doesn't, cut it.
+
+Lenny: Tactical advice for a startup with a retention problem?
+
+Casey: Talk to churned users. Not with a survey — with a phone call. Ask them what the last thing they did in the product was, and why they stopped. The answer is almost always something you didn't expect.
+
+And then talk to your most retained users. What's their routine? What would break in their life if you went away? The delta between those two groups is your product roadmap.
+
+[Transcript ends]

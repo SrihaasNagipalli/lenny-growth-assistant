@@ -1,0 +1,48 @@
+Lenny's Podcast - Episode 1: How Superhuman Built an Engine to Find Product-Market Fit
+Host: Lenny Rachitsky | Guest: Rahul Vohra, CEO of Superhuman
+
+[Transcript begins]
+
+Lenny: Welcome to the show. Today I'm talking with Rahul Vohra, the CEO and co-founder of Superhuman. Rahul, welcome.
+
+Rahul: Thanks for having me, Lenny. Excited to dig into this.
+
+Lenny: So let's start with product-market fit. You've written one of the most cited essays on how to measure it. Walk me through the framework.
+
+Rahul: Sure. The fundamental question is: how disappointed would your users be if they could no longer use your product? We survey users and ask them to pick one of four options: very disappointed, somewhat disappointed, not disappointed, or don't care.
+
+The key insight is this: if more than 40% of your users say they'd be very disappointed without your product, you have product-market fit. Below 40%, you don't.
+
+Lenny: Where did that 40% number come from?
+
+Rahul: Empirically. We benchmarked it across hundreds of startups. Companies with strong product-market fit — the Slacks, the Dropboxes of the world — consistently scored above 40%. Companies that struggled, that eventually died, scored below.
+
+Lenny: And Superhuman was at 22% when you started this process?
+
+Rahul: That's right. And here's the critical mistake most founders make: they look at that low score and think they need to make everyone happy. Wrong. You look at the people who said "very disappointed" and you ask: who are they? What do they love? And equally important — what do the "somewhat disappointed" people wish the product had?
+
+Lenny: Talk me through how you actually used the survey responses.
+
+Rahul: We'd ask three follow-up questions. First: what type of person do you think would most benefit from Superhuman? Second: what's the main benefit you get from it? Third: what would help you get more out of it?
+
+The "very disappointed" segment told us: the main benefit was speed. They were busy professionals who had hundreds of emails a day and felt drowning. Speed was the product promise.
+
+The "somewhat disappointed" segment often said they wanted mobile support. But here's where judgment matters — you can't build for everyone. We decided to deepen the value for our core segment rather than broaden for the periphery.
+
+Lenny: How did that change the product?
+
+Rahul: We doubled down on speed. Every feature we built had to make the product faster. We introduced keyboard shortcuts that let you process email ten times faster than Gmail. We built "Superhuman AI" to help you write faster. Everything centered on the core promise.
+
+The 22% went to 58% in about a year. That's how we found product-market fit.
+
+Lenny: What's the most common mistake you see founders make with this?
+
+Rahul: Confusing retention with product-market fit. You can have a sticky product people use out of habit without having a product they truly love. The survey cuts through that. It's asking about genuine disappointment — the kind that would make someone switch.
+
+Also: not segmenting. If you ask everyone the survey question and average the results, you'll get a muddled answer. Segment by role, by use case, by acquisition channel. The signal is often buried in a specific cohort.
+
+Lenny: Before we close — one tactical thing founders can do this week?
+
+Rahul: Send the survey. Even if you have 100 users. The data you get will be worth more than a month of strategy sessions. And ask the follow-up questions — the quantitative score is just the start. The qualitative answers are where the insights live.
+
+[Transcript ends]

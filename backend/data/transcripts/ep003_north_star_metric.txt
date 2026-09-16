@@ -1,0 +1,46 @@
+Lenny's Podcast - Episode 3: Finding Your North Star Metric
+Host: Lenny Rachitsky | Guest: Shishir Mehrotra, CEO of Coda
+
+[Transcript begins]
+
+Lenny: Shishir, you've led product at YouTube and now built Coda. You've thought a lot about metrics. What's a North Star Metric and why does it matter?
+
+Shishir: A North Star Metric is the single number that best captures the core value your product delivers to customers. It's not a business metric like revenue — it's a product metric that, when it grows, revenue follows.
+
+For YouTube, it was watch time. Every decision — what to recommend, how to rank, what creators to support — could be evaluated through that lens. Does this increase watch time? Then it's probably good. Does it decrease watch time? Probably not.
+
+Lenny: Why not just use revenue?
+
+Shishir: Revenue is a lagging indicator. It tells you what happened, not what's happening. By the time revenue changes, the product decisions that drove it are months in the past. You've already made twelve more decisions on top of wrong assumptions.
+
+A North Star is a leading indicator. When users find more value, they use the product more, which eventually drives revenue. But you can observe the usage signal in real-time.
+
+Lenny: How do you find your North Star?
+
+Shishir: Start with this question: what is the moment when a user gets genuine value from your product? Not account creation. Not first login. The moment they go "oh, this is actually useful."
+
+For Slack, that moment is when a team sends 2,000 messages. They've found it valuable enough to commit. Slack famously measured that as their activation threshold.
+
+For Airbnb, it's the first successful stay — both parties transacted and it went well.
+
+Lenny: And the metric captures that?
+
+Shishir: Ideally it's a rate or frequency of that moment happening across your user base. "Number of teams sending 2,000 messages in their first month." That's more actionable than "number of users."
+
+Lenny: What are the failure modes?
+
+Shishir: Three big ones. First: vanity metrics. Total registered users is a vanity metric. Anyone can inflate it. It doesn't capture value. Second: gaming. If your North Star is a number, people will optimize for the number, not the behavior. Choose a metric that's hard to game. Watch time, not clicks.
+
+Third: too many North Stars. I've seen companies with five North Star Metrics. That's not a North Star — that's a sky full of stars. You can't navigate by it. The whole point is to have one.
+
+Lenny: What's Coda's?
+
+Shishir: Docs that get used. A Coda doc that someone creates but never shares — that's not value delivered. A doc that a team uses every day to run their meetings, track their projects — that's value. So we measure active, collaborative docs.
+
+Lenny: Any advice for founders trying to find theirs?
+
+Shishir: Look at your best customers — the ones who would be devastated if you shut down. What do they have in common? What behavior do they all exhibit? That behavior is probably your North Star.
+
+Then test it: does it correlate with retention? With expansion revenue? If your best customers are the ones where this metric is highest, you've found something real.
+
+[Transcript ends]

@@ -1,0 +1,50 @@
+Lenny's Podcast - Episode 2: Why Growth Loops Beat Funnels Every Time
+Host: Lenny Rachitsky | Guest: Brian Balfour, CEO of Reforge
+
+[Transcript begins]
+
+Lenny: Brian, I've heard you say that funnels are the wrong mental model for growth. That's a bold claim. Make your case.
+
+Brian: The funnel model has served us for decades, but it has a fundamental flaw: it's linear. Input goes in the top, output comes out the bottom. It doesn't capture how the best products in the world actually grow.
+
+A growth loop is cyclical. The output of one user cycle becomes the input for acquiring the next user. That's compounding. That's how you get exponential growth instead of linear growth.
+
+Lenny: Give me a concrete example.
+
+Brian: Let's take Dropbox. User signs up. They invite a friend to share a folder. That friend signs up. They invite another friend. Each user cycle produces new users. The referral loop compounds over time.
+
+Or take a marketplace like eBay in the early days. Seller lists an item. Buyer finds it, purchases. That successful transaction causes the seller to list more items and the buyer to come back. Supply and demand feed each other. That's a loop.
+
+Lenny: And a funnel doesn't capture that?
+
+Brian: Not at all. A funnel says: we got X users from ads, Y% converted, Z% retained. Full stop. There's no mechanism for those Z% to go out and generate more users. You have to refuel the top of the funnel every single time.
+
+Lenny: How do you identify your growth loop?
+
+Brian: Three questions. One: what is the output of a user engaging with your product? Two: can that output become an input to acquiring another user? Three: is there a mechanism that connects those two?
+
+For a social product, the output is content. That content gets shared. Sharing brings in new users. Loop closed.
+
+For a B2B SaaS product, the output might be work artifacts — documents, reports. If those artifacts get shared with non-users, you have a viral loop. Think Calendly, DocuSign.
+
+Lenny: What about products where it's not obvious?
+
+Brian: Most products have a latent loop that founders haven't activated yet. Take a CRM. Salespeople use it. They create data. That data could be analyzed and turned into industry benchmarks. Benchmarks attract prospects. Prospects become users.
+
+The question is always: what is the natural byproduct of my users using my product, and can that byproduct recruit more users?
+
+Lenny: How does this change how you build?
+
+Brian: Fundamentally. In a funnel model, you optimize each stage independently. In a loop model, you optimize the cycle. You ask: how do I make the loop spin faster? How do I make it wider? How do I add more loops?
+
+Faster: reduce friction at every step. Wider: increase the conversion rate of output to input. More loops: add new ways users recruit users.
+
+Lenny: Favorite example of a company that nailed this?
+
+Brian: Slack. Think about it. Someone uses Slack. They invite their colleagues. The colleagues integrate their tools — GitHub, Jira. Those integrations produce notifications in Slack. Those notifications bring those tool users into Slack. The more integrated Slack is, the stickier and more referral-rich it becomes.
+
+Lenny: Takeaway for founders?
+
+Brian: Map your loop before you build your next feature. Draw it on a whiteboard. If you can't close the loop, you're building a feature, not a growth system.
+
+[Transcript ends]

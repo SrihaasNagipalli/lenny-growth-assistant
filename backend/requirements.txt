@@ -1,0 +1,34 @@
+# Web framework
+fastapi
+uvicorn[standard]
+python-multipart
+
+# Config
+pydantic
+pydantic-settings
+
+# Database
+sqlalchemy[asyncio]
+aiosqlite
+asyncpg
+
+# AI / LLM
+anthropic
+httpx
+
+# Vector store
+chromadb
+
+# Embeddings (local fallback)
+sentence-transformers
+
+# HTML sanitization
+bleach
+
+# Testing
+pytest
+pytest-asyncio
+pytest-cov
+
+# Dev utilities
+python-dotenv

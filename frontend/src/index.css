@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+}
+
+@layer utilities {
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    font-weight: 600;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #111827;
+  }
+  .prose p {
+    margin: 0.5em 0;
+  }
+  .prose ul, .prose ol {
+    padding-left: 1.5em;
+    margin: 0.5em 0;
+  }
+  .prose code {
+    background: #f3f4f6;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-size: 0.875em;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+  .prose pre code {
+    background: transparent;
+    padding: 0;
+  }
+  .prose pre {
+    background: #1f2937;
+    color: #f9fafb;
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 0.875em;
+  }
+  .prose strong {
+    font-weight: 600;
+  }
+  .prose blockquote {
+    border-left: 3px solid #4361ee;
+    padding-left: 1em;
+    color: #6b7280;
+    font-style: italic;
+  }
+  .prose table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .prose th, .prose td {
+    border: 1px solid #e5e7eb;
+    padding: 0.5em 0.75em;
+    text-align: left;
+  }
+  .prose th {
+    background: #f9fafb;
+    font-weight: 600;
+  }
+}

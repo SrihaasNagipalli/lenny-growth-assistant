@@ -1,0 +1,61 @@
+services:
+  # ── Backend ───────────────────────────────────────────────────────────────────
+  - type: web
+    name: lenny-growth-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: LLM_PROVIDER
+        value: anthropic
+      - key: ANTHROPIC_MODEL
+        value: claude-haiku-4-5-20251001
+      - key: ANTHROPIC_API_KEY
+        sync: false       # Set this manually in the Render dashboard
+      - key: DATABASE_URL
+        value: sqlite+aiosqlite:///./data/lenny.db
+      - key: CHROMA_PERSIST_DIR
+        value: /app/data/chroma
+      - key: TRANSCRIPTS_DIR
+        value: /app/data/transcripts
+      - key: CHROMA_COLLECTION
+        value: lenny_transcripts
+      - key: RAG_CHUNK_SIZE
+        value: "800"
+      - key: RAG_CHUNK_OVERLAP
+        value: "100"
+      - key: RAG_TOP_K
+        value: "5"
+      - key: HF_HUB_OFFLINE
+        value: "1"
+      - key: TRANSFORMERS_OFFLINE
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
+      - key: MKL_NUM_THREADS
+        value: "1"
+      - key: TOKENIZERS_PARALLELISM
+        value: "false"
+      - key: LOG_LEVEL
+        value: INFO
+
+  # ── Frontend ──────────────────────────────────────────────────────────────────
+  - type: web
+    name: lenny-growth-frontend
+    runtime: static
+    buildCommand: cd frontend && npm ci && npm run build
+    staticPublishPath: ./frontend/dist
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: no-cache, no-store, must-revalidate
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        value: https://lenny-growth-backend.onrender.com
