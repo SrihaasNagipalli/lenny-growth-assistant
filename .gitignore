@@ -22,9 +22,8 @@ dist/
 .parcel-cache/
 *.log
 
-# Data — only ignore root-level generated data, not backend/data/transcripts
-/data/chroma/
-/data/transcripts/
+# Data — root-level data is runtime only (mounted via Docker volume)
+/data/
 backend/data/chroma/
 *.db
 *.db-shm
